@@ -6,55 +6,46 @@ As part of the 'Live training Spec' process, you will need to complete the follo
 
 Edit this README by filling in the information for steps 1 - 4.
 
+
 ## Step 1: Foundations 
 
 This part of the 'Live training Spec' process is designed to help guide you through session design by having you think through several key questions. Please make sure to delete the examples provided here for you.
 
 ### A. What problem(s) will students learn how to solve? (minimum of 5 problems)
-
-> _Here's an example from the Python for Spreadsheeets Users live session_
->
-> - Key considerations to take in when transitioning from spreadsheets to Python.
-> - The Data Scientist mindset and keys to success in transitioning to Python.
-> - How to import `.xlsx` and `.csv` files into Python using `pandas`.
-> - How to filter a DataFrame using `pandas`.
-> - How to create new columns out of your DataFrame for more interesting features.
-> - Perform exploratory analysis of a DataFrame in `pandas`.
-> - How to clean a DataFrame using `pandas` to make it ready for analysis.
-> - Apply common spreadsheets operations such as pivot tables and vlookups in Python using `pandas`.
-> - Create simple, interesting visualizations using `matplotlib`.
-
+- How to download single file and multiple files using `wget` and `curl`.
+- How to convert, preview, filter, and manipulate data files using `csvkit` library commands.
+- How to perform database operations via the commandline using `csvkit` library commands.
+- How to chain commands together using operators
+- How to install Python libraries using `pip` and execute Python scripts via the command line.
 
 ### B. What technologies, packages, or functions will students use? Please be exhaustive.
-
-> - pandas
-> - matplotlib
-> - seaborn
+- `wget`
+- `curl`
+- `csvkit` library
+- `pip`
 
 ### C. What terms or jargon will you define?
 
 _Whether during your opening and closing talk or your live training, you might have to define some terms and jargon to walk students through a problem you’re solving. Intuitive explanations using analogies are encouraged._
 
-> _Here's an example from the [Python for Spreadsheeets Users live session](https://www.datacamp.com/resources/webinars/live-training-python-for-spreadsheet-users)._
-> 
-> - Packages: Packages are pieces of software we can import to Python. Similar to how we download, install Excel on MacOs, we import pandas on Python. (You can find it at minute 6:30)
+- Documentation manuals
+- Option flags
+- Multi-file processing
+- ETL: extract, transform, load
+- Database operations
+- Package manager (`pip`)
+- Version control 
 
 ### D. What mistakes or misconceptions do you expect? 
 
-_To help minimize the amount of Q&As and make your live training re-usable, list out some mistakes and misconceptions you think students might encounter along the way._
+- Depending on the students' operating system, the installation will look different when they take the notebook course content and apply it locally on their machines.  This can be alleviated by specifically speending time in the course to call out how each OS will handle the installations differently.
 
-> _Here's an example from the [Data Visualization in Python live session](https://www.datacamp.com/resources/webinars/data-visualization-in-python)_
-> 
-> - Anatomy of a matplotlib figure: When calling a matplotlib plot, a figure, axes and plot is being created behind the background. (You can find it at minute 11)
-> - As long as you do understand how plots work behind the scenes, you don't need to memorize syntax to customize your plot. 
+- Students with less grounding in command line basics might be confused by how the course content is taught inside a notebook.  Extra time spent on disambiguating this and showing screenshots of what the content will look like on a Terminal will be helpful.
 
 ### E. What datasets will you use? 
 
-Live training sessions are designed to walk students through something closer to a real-life data science workflow. Accordingly, the dataset needs to accommodate that user experience. 
-As a rule of thumb, your dataset should always answer yes to the following question: 
-> Is the dataset/problem I’m working on, something an industry data scientist/analyst could work on? 
+- Spotify music attributes dataset. Similar to the data used in [Data Processing in Shell](https://learn.datacamp.com/courses/data-processing-in-shell).
 
-Check our [datasets to avoid](https://instructor-support.datacamp.com/en/articles/2360699-datasets-to-avoid) list. 
 
 ## Step 2: Who is this session for?
 
@@ -69,73 +60,85 @@ Terms like "beginner" and "expert" mean different things to different people, so
 
 - [ ] Data Consumer
 - [ ] Leader 
-- [ ] Data Analyst
-- [ ] Citizen Data Scientist
-- [ ] Data Scientist
-- [ ] Data Engineer
+- [x] Data Analyst
+- [x] Citizen Data Scientist
+- [x] Data Scientist
+- [x] Data Engineer
 - [ ] Database Administrator
-- [ ] Statistician
-- [ ] Machine Learning Scientist
-- [ ] Programmer
+- [x] Statistician
+- [x] Machine Learning Scientist
+- [x] Programmer
 - [ ] Other (please describe)
 
 ### What industries would this apply to?
 
-*List one or more industries that the content would be appropriate for.*
-
+Across all industries that requires product data analysts and scientists.  
 
 ### What level of expertise should learners have before beginning the live training?
 
 *List three or more examples of skills that you expect learners to have before beginning the live training*
 
-> - Can draw common plot types (scatter, bar, histogram) using matplotlib and interpret them
-> - Can run a linear regression, use it to make predictions, and interpret the coefficients.
-> - Can calculate grouped summary statistics using SELECT queries with GROUP BY clauses.
+- Can write a basic SELECT SQL query.
+- Can do basic EDA in Python and understand why this needs to be done and can interpret summary statistics output.
+- Has done data analysis from beginning to end (e.g. from extracting the data to cleaning data to analyzing and summarizing results)
+- Has very basic understanding of command line (e.g. can open terminal, do file navigation, print log)
 
 
 ## Step 3: Prerequisites
 
 List any prerequisite courses you think your live training could use from. This could be the live session’s companion course or a course you think students should take before the session. Prerequisites act as a guiding principle for your session and will set the topic framework, but you do not have to limit yourself in the live session to the syntax used in the prerequisite courses.
 
+- [Introduction to Shell](https://learn.datacamp.com/courses/introduction-to-shell)
+- [Intermediate Python for Data Science](https://learn.datacamp.com/courses/intermediate-python-for-data-science)
+- [Introduction to SQL](https://learn.datacamp.com/courses/introduction-to-sql)
+
 
 ## Step 4: Session Outline
 
 A live training session usually begins with an introductory presentation, followed by the live training itself, and an ending presentation. Your live session is expected to be around 2h30m-3h long (including Q&A) with a hard-limit at 3h30m. You can check out our live training content guidelines [here](_LINK_). 
 
+### Introduction Slides
+- Introduction to the webinar and instructor (led by DataCamp TA)
+- Introduction to the topics
+  - Why use command line for data processing
+  - Go over session outline
+  - Set expectations about Q&A
 
-> _Example from [Python for Spreadsheet Users](https://www.datacamp.com/resources/webinars/live-training-python-for-spreadsheet-users)_
->
-> ### Introduction Slides 
-> - Introduction to the webinar and instructor (led by DataCamp TA)
-> - Introduction to the topics
->   - Discuss need to become data fluent
->   - Define data fluency
->   - Discuss how learning Python fits into that and go over session outline
->   - Set expectations about Q&A
->
-> ### Live Training
-> #### Exploratory Data Analysis
-> - Import data and print header of DataFrame `pd.read_excel()`, `.head()`
-> - Glimpse at the data to
->   - Get column types using `.dtypes`
->   - Use `.describe()`, `.info()`
-> - **Q&A** 
-> #### Data Cleaning and making it ready for analysis
-> - Convert date columns to datetime `pd.to_datetime()`
-> - Change column names
-> - Extract year, month from datetime `.strftime()`
-> - Drop an irrelevant column `.drop()`
-> - Fill missing values with `.fillna()`
-> #### Creating a report
-> - First report question: What is our overall sales performance this year? `.groupby()`, `.plt.plot()`
-> - Second report question: What is our overall sales performance this year? `.merge()`, `.groupby()`, `plt.plot()`
-> - Third report question: What is our overall sales performance this year? `.merge()`, `.groupby()`, `plt.plot()`
-> - **Q&A**
->
-> ### Ending slides
-> - Recap of what we learned
-> - The data science mindset
-> - Call to action and course recommendations
+### Live Training
+#### 1. Downloading data
+- Command Line 101: File navigation, manuals, option flags, interpreting output
+- Download a single file 
+- Download multiple files
+  - via file names
+  - via wildcards
+  - via a saved list
+- Q&A & break
+#### 2. Exploratory Data Analysis 
+- Introducing the `csvkit` library
+- Unzip data
+- Extract data 
+- Preview data
+- Filter and subset data
+- Q&A & break
+#### 3. Database Operations 
+- Database 101: What is a database? Basic SQL queries review.
+- Extract data from database 
+- Store SQL query as shell variable
+- Command line operators and linking commands
+- Pushing data back to database 
+- Q&A & break
+#### 4. Python on the Command Line
+- Python 101: running .py files
+- `pip` and installing dependencies
+- Bringing everything together to create a mini data pipeline.
+- Q&A & break
+
+### Ending slides
+- Recap of what we learned
+- The data science mindset
+- Call to action and course recommendations
+
+
 
 ## Authoring your session
 
